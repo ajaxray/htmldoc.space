@@ -10,6 +10,8 @@ Install the skill once, then say "share this report" in Claude Code, Codex, Pi, 
 npx skills add ajaxray/htmldoc-skill
 ```
 
+Then ask your agent: **"share this report"**. It replies with the link and the expiry date.
+
 ![Claude Code answering "share the report.html" with a link](demo/agent.gif)
 
 ## Or run one command
