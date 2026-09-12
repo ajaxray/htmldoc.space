@@ -19,7 +19,7 @@ What shipped, newest first. Three moving parts: the **service** (htmldoc.space a
 **Service**
 
 - Landing page and `/docs`.
-- GitHub sign-in. One API key per account, shown once, regenerable from the dashboard.
+- GitHub sign-in. One API key per account; reveal it or regenerate it from the dashboard.
 - Dashboard: live pages with state and expiry, delete, and **+ New** to share a file from the browser by upload or paste, through the same validation and upload budget as the CLI.
 - Viewer on `p.htmldoc.space`: HTML served byte for byte, Markdown rendered server-side, a small badge on every page with a **Report** link, no cookies, no analytics.
 - Report form, public, with a lookup page for pasting a link. Reports are stored, then emailed to the operator within a rate limit.
