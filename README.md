@@ -25,7 +25,7 @@ npx -y htmldoc-cli report.html
 
 ![npx htmldoc-cli report.html prints a share link](demo/cli.gif)
 
-Both links above are real pages, shared with the tool while recording. Open one.
+Both links above are real pages, shared with the tool while recording: [the agent's](https://p.htmldoc.space/SQBQdOCsiEhS) and [the CLI's](https://p.htmldoc.space/NO8JWj8cd57m). Open one.
 
 ## Links
 
