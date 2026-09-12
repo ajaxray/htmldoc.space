@@ -1,19 +1,33 @@
 # htmldoc.space
 
-Share one HTML or Markdown file as an unlisted link that lives 30 days. One command, or one sentence to your AI agent.
+Share one HTML or Markdown file as an unlisted link that lives 30 days. Ask your AI agent, or run one command. No deploy, no repo, no drag-and-drop.
+
+## Ask your agent
+
+Install the skill once, then say "share this report" in Claude Code, Codex, Pi, or [any agent that supports skills](https://www.skills.sh/agent). The agent runs the CLI and hands you the link. It never sees your key.
+
+```sh
+npx skills add ajaxray/htmldoc-skill
+```
+
+![Claude Code answering "share the report.html" with a link](demo/agent.gif)
+
+## Or run one command
+
+No install needed. stdout is only the URL, so it pipes.
 
 ```sh
 npx -y htmldoc-cli report.html
 # https://p.htmldoc.space/NO8JWj8cd57m
 ```
 
-```sh
-npx skills add ajaxray/htmldoc-skill   # then say "share this report" to your agent
-```
-
 ![npx htmldoc-cli report.html prints a share link](demo/cli.gif)
 
-- Site and sign-in: [htmldoc.space](https://htmldoc.space/?utm_source=github)
+Both links above are real pages, shared with the tool while recording. Open one.
+
+## Links
+
+- Sign in and get a key: [htmldoc.space](https://htmldoc.space/?utm_source=github)
 - Docs: [htmldoc.space/docs](https://htmldoc.space/docs?utm_source=github)
 - CLI: [`htmldoc-cli` on npm](https://www.npmjs.com/package/htmldoc-cli), source [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli)
 - Agent skill: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill) on [skills.sh](https://skills.sh)
