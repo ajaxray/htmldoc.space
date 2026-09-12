@@ -8,7 +8,6 @@ Each item is an issue. 👍 the ones you want; [this list](https://github.com/aj
 
 ## Agent-side value (the differentiator)
 
-- **Multi-file bundles** ([#1](https://github.com/ajaxray/htmldoc.space/issues/1)). A directory with `index.html` plus its CSS, images, and a few sibling pages, served under one id.
 - **MCP server** ([#4](https://github.com/ajaxray/htmldoc.space/issues/4)). htmldoc as a tool in Claude Desktop, Cursor, and others without a skill install.
 - **Comments on pages** ([#6](https://github.com/ajaxray/htmldoc.space/issues/6)). Lightweight threads the CLI can read back, so the agent can revise from feedback.
 - **Diff link on update.** After `--update`, a second link showing what changed between versions.
@@ -34,3 +33,7 @@ Each item is an issue. 👍 the ones you want; [this list](https://github.com/aj
 - **Export and delete account** from the dashboard.
 
 Items without an issue number are ideas; open an issue if you want one of them.
+
+## Not planned
+
+- **Multi-file bundles** ([#1](https://github.com/ajaxray/htmldoc.space/issues/1)). One file per link is the product; a directory with assets is a site. Ask your agent to inline CSS and images into one self-contained file.
