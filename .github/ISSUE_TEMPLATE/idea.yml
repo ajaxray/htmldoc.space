@@ -1,0 +1,19 @@
+name: Idea
+description: A feature that is not on the roadmap yet
+labels: [idea]
+body:
+  - type: markdown
+    attributes:
+      value: Check the [roadmap](https://github.com/ajaxray/htmldoc.space/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap+sort%3Areactions-%2B1-desc) first; if it is there, 👍 it instead.
+  - type: textarea
+    id: what
+    attributes:
+      label: What would you do with it?
+      description: The situation, not the feature. "My agent made X, I wanted to Y, and I could not because Z."
+    validations:
+      required: true
+  - type: input
+    id: how
+    attributes:
+      label: How do you share files today?
+      placeholder: CLI, the skill in Claude Code, the dashboard, something else

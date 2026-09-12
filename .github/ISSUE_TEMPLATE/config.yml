@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Vote on the roadmap
+    url: https://github.com/ajaxray/htmldoc.space/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap+sort%3Areactions-%2B1-desc
+    about: Planned features, sorted by 👍. React on the ones you want instead of opening a duplicate.
+  - name: Bug in the htmldoc command
+    url: https://github.com/ajaxray/htmldoc-cli/issues/new
+    about: The CLI has its own tracker.
+  - name: The agent skill misbehaving
+    url: https://github.com/ajaxray/htmldoc-skill/issues/new
+    about: The skill has its own tracker.
+  - name: Report a page that should not be online
+    url: https://htmldoc.space/report
+    about: Use the Report link in the page badge or this form. Not an issue.
+  - name: Something private
+    url: https://htmldoc.space/contact
+    about: Account or data questions, takedown notices.

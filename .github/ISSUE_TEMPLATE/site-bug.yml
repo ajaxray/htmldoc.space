@@ -1,0 +1,22 @@
+name: Site bug
+description: Something on htmldoc.space or a shared page is broken or wrong
+labels: [bug]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      placeholder: https://htmldoc.space/docs, the dashboard, a p.htmldoc.space link (leave the id out if the page is not yours to show)
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Safari on iPhone, Chrome on Linux
