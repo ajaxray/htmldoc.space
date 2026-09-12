@@ -14,6 +14,8 @@ Then ask your agent in plain words: **"share this report"**, **"publish process.
 
 ![Claude Code answering "share the report.html" with a link](demo/agent.gif)
 
+Agents write better HTML than Markdown, and the Claude Code team [says so with twenty examples](https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html). Their one caveat is sharing the file. This is that step.
+
 ## Or run one command
 
 No install needed. stdout is only the URL, so it pipes.
@@ -26,6 +28,20 @@ npx -y htmldoc-cli report.html
 ![npx htmldoc-cli report.html prints a share link](demo/cli.gif)
 
 Both links above are real pages, shared with the tool while recording: [the agent's](https://p.htmldoc.space/SQBQdOCsiEhS) and [the CLI's](https://p.htmldoc.space/NO8JWj8cd57m). Open one.
+
+## Examples
+
+Real pages, each shared with the tool. They expire like any other page and get re-shared with `--update`, so the links stay the same.
+
+- [A plan](https://p.htmldoc.space/qJydAHL14E67): Markdown, rendered. The product roadmap, published with the product.
+- [A report](https://p.htmldoc.space/NO8JWj8cd57m): HTML with bars and a table. Source: [`demo/report.html`](demo/report.html).
+- [A UI mockup](https://p.htmldoc.space/il9ISDzyOR59): HTML, static, generated from a one-paragraph brief. Source: [`demo/mockup.html`](demo/mockup.html).
+
+Three more, straight from the Claude Code team's [html-effectiveness](https://github.com/anthropics/html-effectiveness) examples (MIT, Anthropic PBC), re-shared unchanged. Copies with their license in [`demo/html-effectiveness/`](demo/html-effectiveness/).
+
+- [An implementation plan](https://p.htmldoc.space/A95uizMhj3My): milestones, data-flow diagrams, mockups, risks.
+- [Component variants](https://p.htmldoc.space/6jSIcJCQbWWj): every state of a UI component on one sheet.
+- [SVG illustrations](https://p.htmldoc.space/1cM6cn9gKoJx): inline figures for a blog post.
 
 ## Links
 
