@@ -2,9 +2,21 @@
 
 What shipped, newest first. Three moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), and the **skill** (`ajaxray/htmldoc-skill` on skills.sh).
 
-## Unreleased
+## 2026-09-18: sign in without copying a key
 
-- Service: the landing page counts visits per day and referring source, with no per-visitor data, so a launch post can be traced to sign-ups. Disclosed in the terms. Shared pages are not counted.
+- CLI 0.2.0: `htmldoc login` prints an approval link and a code and opens it in your browser. Sign in with GitHub, check the code, click Approve; the command waits for the click, stores the key, and says who you are. `login --no-wait` and `login --wait` split that in two for agents, which have no terminal. `login --paste` keeps the old copy-the-key way.
+- Skill: when the CLI has no key, the agent runs the approval flow itself, relays the link and code word for word, waits for your click, then finishes the share. It never sees the key.
+- Service: the approval page at `/connect/<code>`, with GitHub sign-in handing you back to it, and the pairing endpoints behind it. An account is created on first sign-in. Disclosed in the terms and described in `llms.txt`.
+- Landing, docs, and dashboard describe both sign-in paths.
+
+## 2026-09-12
+
+- Service: link previews. Every page carries a description, canonical URL, Open Graph and Twitter card, with a 1200×630 image.
+- Service: `/robots.txt`, `/sitemap.xml`, and `/llms.txt`. Shared pages stay disallowed and `noindex`.
+- Service: guests reading the landing page or docs get no session cookie and cause no database write.
+- Service: the landing page counts visits per day and referring source, with no per-visitor data. Disclosed in the terms. Shared pages are not counted.
+- Docs: an Examples section with six live pages, a "Why HTML, and what to ask for" section, and a Feedback section pointing at this repo.
+- Hero pill reads "unlisted links · free · agent-ready".
 
 ## 2026-09-11
 

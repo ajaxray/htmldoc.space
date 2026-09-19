@@ -16,9 +16,11 @@ Then ask your agent in plain words: **"share this report"**, **"publish process.
 
 Agents write better HTML than Markdown, and the Claude Code team [says so with twenty examples](https://claude.com/blog/using-claude-code-the-unreasonable-effectiveness-of-html). Their one caveat is sharing the file. This is that step.
 
+No account yet? You do not need to set one up first. The first time you ask, the agent shows you one approval link. Sign in with GitHub there, check that the code matches, click Approve, and the share link comes back. The agent never sees your key.
+
 ## Or run one command
 
-No install needed. stdout is only the URL, so it pipes.
+No install needed. stdout is only the URL, so it pipes. First time: `npx -y htmldoc-cli login` opens the same approval page, waits for your click, and stores the key.
 
 ```sh
 npx -y htmldoc-cli report.html
@@ -45,7 +47,7 @@ Three more, straight from the Claude Code team's [html-effectiveness](https://gi
 
 ## Links
 
-- Sign in and get a key: [htmldoc.space](https://htmldoc.space/?utm_source=github)
+- Site and dashboard: [htmldoc.space](https://htmldoc.space/?utm_source=github)
 - Docs: [htmldoc.space/docs](https://htmldoc.space/docs?utm_source=github)
 - CLI: [`htmldoc-cli` on npm](https://www.npmjs.com/package/htmldoc-cli), source [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli)
 - Agent skill: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill) on [skills.sh](https://skills.sh)
@@ -70,4 +72,4 @@ Every planned item is an issue labelled [`roadmap`](https://github.com/ajaxray/h
 
 ## Facts worth knowing
 
-One file per link. HTML is served byte for byte; Markdown is rendered server-side. Caps: 2 MB HTML, 512 KB Markdown, 100 live pages per account. Links expire after 30 days; re-sharing with `--update` keeps the URL and resets the clock. Every page carries a small badge with a Report link and nothing else. No analytics or ads on pages. GitHub sign-in, one API key per account. Free.
+One file per link. HTML is served byte for byte; Markdown is rendered server-side. Caps: 2 MB HTML, 512 KB Markdown, 100 live pages per account. Links expire after 30 days; re-sharing with `--update` keeps the URL and resets the clock. Every page carries a small badge with a Report link and nothing else. No analytics or ads on pages. GitHub sign-in, one API key per account, handed to the CLI by a browser approval so you never copy it. Free.
