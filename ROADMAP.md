@@ -10,7 +10,7 @@ Each item is an issue. 👍 the ones you want; [this list](https://github.com/aj
 
 - **MCP server** ([#4](https://github.com/ajaxray/htmldoc.space/issues/4)). htmldoc as a tool in Claude Desktop, Cursor, and others without a skill install.
 - **Comments on pages** ([#6](https://github.com/ajaxray/htmldoc.space/issues/6)). Lightweight threads the CLI can read back, so the agent can revise from feedback.
-- **Diff link on update.** After `--update`, a second link showing what changed between versions.
+- **Version history and a diff link** ([#9](https://github.com/ajaxray/htmldoc.space/issues/9)). Every `--update` keeps the previous version behind the same stable URL, and prints a link showing what changed.
 - **Pull a page back down.** `htmldoc get <id>` returns the source so a new session can keep editing.
 
 ## Reader-side value
