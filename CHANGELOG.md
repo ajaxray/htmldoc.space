@@ -2,6 +2,13 @@
 
 What shipped, newest first. Three moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), and the **skill** (`ajaxray/htmldoc-skill` on skills.sh).
 
+## 2026-09-24: pinned pages
+
+- Service: pin a page from the dashboard and it stops expiring. A pinned page is never purged and keeps its link. Five pins per account; unpin and the usual 30 days start again from that moment. Pinning an expired page that is still inside its 7-day grace window brings it back. Pinned pages still count toward the 100 live pages.
+- Service: `--update` on a pinned page keeps the pin. The API page list adds `pinned`, and a pinned page has no expiry (`expires_at: null`). Pinning is dashboard-only; there is no CLI or API way to pin.
+- CLI 0.2.1: `htmldoc list` shows `pinned` in the EXPIRES column, and the line after an upload says `expires: never (pinned)`.
+- Docs, landing page, and `llms.txt` describe pinning.
+
 ## 2026-09-18: sign in without copying a key
 
 - CLI 0.2.0: `htmldoc login` prints an approval link and a code and opens it in your browser. Sign in with GitHub, check the code, click Approve; the command waits for the click, stores the key, and says who you are. `login --no-wait` and `login --wait` split that in two for agents, which have no terminal. `login --paste` keeps the old copy-the-key way.

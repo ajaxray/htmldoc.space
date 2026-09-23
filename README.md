@@ -72,4 +72,4 @@ Every planned item is an issue labelled [`roadmap`](https://github.com/ajaxray/h
 
 ## Facts worth knowing
 
-One file per link. HTML is served byte for byte; Markdown is rendered server-side. Caps: 2 MB HTML, 512 KB Markdown, 100 live pages per account. Links expire after 30 days; re-sharing with `--update` keeps the URL and resets the clock. Every page carries a small badge with a Report link and nothing else. No analytics or ads on pages. GitHub sign-in, one API key per account, handed to the CLI by a browser approval so you never copy it. Free.
+One file per link. HTML is served byte for byte; Markdown is rendered server-side. Caps: 2 MB HTML, 512 KB Markdown, 100 live pages per account. Links expire after 30 days; re-sharing with `--update` keeps the URL and resets the clock, and a page pinned from the dashboard never expires. Every page carries a small badge with a Report link and nothing else. No analytics or ads on pages. GitHub sign-in, one API key per account, handed to the CLI by a browser approval so you never copy it. Free.

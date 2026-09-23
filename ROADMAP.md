@@ -2,7 +2,7 @@
 
 Ideas to weigh now that v1 is out. Nothing here is committed. The filter for every item: does it make a shared link more useful to the reader, or to the agent that published it, without turning htmldoc into a hosting product?
 
-Positioning to keep: the publish step for agents and one-command sharing. Unlisted links, 30 days, one file, no install.
+Positioning to keep: the publish step for agents and one-command sharing. Unlisted links, 30 days unless pinned, one file, no install.
 
 Each item is an issue. 👍 the ones you want; [this list](https://github.com/ajaxray/htmldoc.space/issues?q=is%3Aissue+is%3Aopen+label%3Aroadmap+sort%3Areactions-%2B1-desc) is sorted by votes.
 
@@ -16,7 +16,8 @@ Each item is an issue. 👍 the ones you want; [this list](https://github.com/aj
 ## Reader-side value
 
 - **Visit counts** ([#2](https://github.com/ajaxray/htmldoc.space/issues/2)). Total and last-seen on the dashboard and in `list --json`. No per-visitor logging.
-- **Choose the expiry** ([#3](https://github.com/ajaxray/htmldoc.space/issues/3)). `--expires 7d|30d|90d` within a cap.
+- **Choose the expiry** ([#3](https://github.com/ajaxray/htmldoc.space/issues/3)). `--expires 7d|30d|90d` within a cap. Pages that should never expire can already be pinned from the dashboard.
+- **Pin from the CLI.** `htmldoc pin <id>` and `--pin` at upload, so an agent can keep a page alive without the dashboard. Pinning is dashboard-only today.
 - **Password on a page** ([#5](https://github.com/ajaxray/htmldoc.space/issues/5)). A step above "unlisted" for drafts shared with a client.
 - **Editable slug** ([#7](https://github.com/ajaxray/htmldoc.space/issues/7)). `p.htmldoc.space/q3-report` instead of a random id; the id stays as an alias.
 
