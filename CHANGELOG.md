@@ -1,6 +1,14 @@
 # Changelog
 
-What shipped, newest first. Three moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), and the **skill** (`ajaxray/htmldoc-skill` on skills.sh).
+What shipped, newest first. Three moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), the **skill** (`ajaxray/htmldoc-skill` on skills.sh), and the **Pi package** (`pi-htmldoc` on npm).
+
+## 2026-10-05: Pi package
+
+- Pi package 0.1.0: `pi install npm:pi-htmldoc`. The agent gets an `htmldoc_publish` tool that returns the link, id, and expiry, and Pi shows the link as clickable. Re-sharing a file passes its id, so the link stays the same.
+- Pi package: with no key, the tool starts the browser sign-in itself, shows the approval link and code in Pi, waits up to 10 minutes for your click, then publishes. The model never runs login commands and never sees the key.
+- Pi package: `/share <file>` publishes without a model turn; `/share` alone re-shares the last file to the same link, and `--new` makes a new one. `/htmldoc-login` signs in ahead of time. The footer shows the last link, and shares are kept with the session.
+- Pi package: bundles the `htmldoc-cli` it runs, so nothing is fetched at run time, and a `pi-htmldoc` skill that loads beside the generic skill without a name clash.
+- Skill: says links live 30 days unless pinned on the dashboard, and reports a pinned page's expiry as never.
 
 ## 2026-09-24: pinned pages
 

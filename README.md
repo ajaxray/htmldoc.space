@@ -18,6 +18,14 @@ Agents write better HTML than Markdown, and the Claude Code team [says so with t
 
 No account yet? You do not need to set one up first. The first time you ask, the agent shows you one approval link. Sign in with GitHub there, check that the code matches, click Approve, and the share link comes back. The agent never sees your key.
 
+### Using Pi?
+
+Install the Pi package instead of the skill. It gives the agent a native `htmldoc_publish` tool, runs the sign-in inside Pi, and adds `/share <file>` so you can publish without asking the model. The footer shows the last link.
+
+```sh
+pi install npm:pi-htmldoc
+```
+
 ## Or run one command
 
 No install needed. stdout is only the URL, so it pipes. First time: `npx -y htmldoc-cli login` opens the same approval page, waits for your click, and stores the key.
@@ -51,6 +59,7 @@ Three more, straight from the Claude Code team's [html-effectiveness](https://gi
 - Docs: [htmldoc.space/docs](https://htmldoc.space/docs?utm_source=github)
 - CLI: [`htmldoc-cli` on npm](https://www.npmjs.com/package/htmldoc-cli), source [ajaxray/htmldoc-cli](https://github.com/ajaxray/htmldoc-cli)
 - Agent skill: [ajaxray/htmldoc-skill](https://github.com/ajaxray/htmldoc-skill) on [skills.sh](https://skills.sh)
+- Pi package: [`pi-htmldoc` on npm](https://www.npmjs.com/package/pi-htmldoc), source [ajaxray/pi-htmldoc](https://github.com/ajaxray/pi-htmldoc)
 
 ## This repo has no code
 
@@ -63,6 +72,7 @@ It is the public home of the product: the [roadmap](ROADMAP.md), the [changelog]
 | Ask for a feature, vote on the roadmap, report the site being down or wrong | [Issues here](https://github.com/ajaxray/htmldoc.space/issues) |
 | Report a bug in the `htmldoc` command | [htmldoc-cli issues](https://github.com/ajaxray/htmldoc-cli/issues) |
 | Report the agent skill misbehaving | [htmldoc-skill issues](https://github.com/ajaxray/htmldoc-skill/issues) |
+| Report the Pi package misbehaving | [pi-htmldoc issues](https://github.com/ajaxray/pi-htmldoc/issues) |
 | Report a page that should not be online | The **Report** link in the badge on that page, or [htmldoc.space/report](https://htmldoc.space/report) |
 | Anything private | [htmldoc.space/contact](https://htmldoc.space/contact) |
 
