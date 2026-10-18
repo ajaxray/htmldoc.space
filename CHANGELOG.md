@@ -1,6 +1,16 @@
 # Changelog
 
-What shipped, newest first. Three moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), the **skill** (`ajaxray/htmldoc-skill` on skills.sh), and the **Pi package** (`pi-htmldoc` on npm).
+What shipped, newest first. Four moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), the **skill** (`ajaxray/htmldoc-skill` on skills.sh), and the **Pi package** (`pi-htmldoc` on npm).
+
+## 2026-10-19: Pi command renamed to /publish
+
+- Pi package 0.1.5: the slash command is now `/publish <file>`; `/publish` alone re-publishes the last file to the same link, and `--new` makes a new one. `/share` is Pi's own built-in command, which uploads your session as a secret GitHub gist and runs before any extension command of that name. So a bare `/share` never reached this package, and Pi hid the package's command from autocomplete. If you used `/share report.html`, use `/publish report.html`.
+- Service: the `/pi` page, the docs, and `llms.txt` name `/publish`.
+
+## 2026-10-18: a page for Pi
+
+- Service: [htmldoc.space/pi](https://htmldoc.space/pi), a landing page for the Pi package: the install command with a copy button, asking Pi vs publishing yourself, what you get, the limits, live examples, and common questions. It has its own link preview image, and is linked from the landing page, the docs, the sitemap, and `llms.txt`.
+- Pi package: listed in the [Pi package catalog](https://pi.dev/packages/pi-htmldoc). Versions 0.1.2 to 0.1.4 rewrite the description and README around free publishing for whatever Pi writes, add a catalog preview image ("Share what Pi writes."), and point the package homepage at the new page. No change to how the package works.
 
 ## 2026-10-05: Pi package
 
@@ -8,6 +18,7 @@ What shipped, newest first. Three moving parts: the **service** (htmldoc.space a
 - Pi package: with no key, the tool starts the browser sign-in itself, shows the approval link and code in Pi, waits up to 10 minutes for your click, then publishes. The model never runs login commands and never sees the key.
 - Pi package: `/share <file>` publishes without a model turn; `/share` alone re-shares the last file to the same link, and `--new` makes a new one. `/htmldoc-login` signs in ahead of time. The footer shows the last link, and shares are kept with the session.
 - Pi package: bundles the `htmldoc-cli` it runs, so nothing is fetched at run time, and a `pi-htmldoc` skill that loads beside the generic skill without a name clash.
+- Pi package 0.1.1: the footer reads `last published: <link>  expires: <date> (Pin to survive expiry)`. The full URL stays clickable in terminals that cannot show embedded links, such as JetBrains; the pin hint links to the dashboard where they can. A pinned page shows `expires: never (pinned)`.
 - Skill: says links live 30 days unless pinned on the dashboard, and reports a pinned page's expiry as never.
 
 ## 2026-09-24: pinned pages

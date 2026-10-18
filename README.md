@@ -20,7 +20,7 @@ No account yet? You do not need to set one up first. The first time you ask, the
 
 ### Using Pi?
 
-Install the Pi package instead of the skill. It gives the agent a native `htmldoc_publish` tool, runs the sign-in inside Pi, and adds `/share <file>` so you can publish without asking the model. The footer shows the last link.
+Install the Pi package instead of the skill. It gives the agent a native `htmldoc_publish` tool, runs the sign-in inside Pi, and adds `/publish <file>` so you can publish without asking the model. The footer shows the last link.
 
 ```sh
 pi install npm:pi-htmldoc
