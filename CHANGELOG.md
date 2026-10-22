@@ -2,6 +2,12 @@
 
 What shipped, newest first. Four moving parts: the **service** (htmldoc.space and the `p.` viewer), the **CLI** (`htmldoc-cli` on npm), the **skill** (`ajaxray/htmldoc-skill` on skills.sh), and the **Pi package** (`pi-htmldoc` on npm).
 
+## 2026-10-23: Mermaid diagrams in Markdown
+
+- Service: a ```` ```mermaid ```` code block in a Markdown page now renders as a diagram, light or dark to match the reader. A block that does not parse stays visible as code. Pages without a Mermaid block are unchanged.
+- Service: to draw them, such a page loads Mermaid 12.2.0 from jsDelivr (cdn.jsdelivr.net), pinned and checked with an integrity hash. This is the one exception to "nothing else is injected": the docs, `llms.txt`, and the terms keep that promise and say so, and the terms note that a reader's browser contacts jsDelivr when it opens such a page.
+- Service: existing Markdown pages were re-rendered, so Mermaid blocks shared before today show as diagrams too.
+
 ## 2026-10-19: Pi command renamed to /publish
 
 - Pi package 0.1.5: the slash command is now `/publish <file>`; `/publish` alone re-publishes the last file to the same link, and `--new` makes a new one. `/share` is Pi's own built-in command, which uploads your session as a secret GitHub gist and runs before any extension command of that name. So a bare `/share` never reached this package, and Pi hid the package's command from autocomplete. If you used `/share report.html`, use `/publish report.html`.
